@@ -24,7 +24,7 @@ class ProductoSeeder extends Seeder
             {
                 $contador_producto++;
                 Producto::create([
-                    'nombre' => "Producto $i",
+                    'nombre' => "Producto $contador_producto",
                     'marca' => 'Marca ' . Str::random(10),
                     'precio' => mt_rand(1, 500),
                     'stock' => mt_rand(1, 10),

@@ -4,9 +4,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductoController::class, 'index'])->name('productos.index');
 
 Route::get('/productos', [ProductoController::class, 'index'])->name('productos.index');
 

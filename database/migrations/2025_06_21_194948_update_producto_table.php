@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('producto', function (Blueprint $table) {
             $table->string('nombre', 100)->change();
-            $table->string('marca', 100)->nullable();
+            $table->string('marca', 100)->after('precio')->default(0)->nullable();
             $table->integer('stock')->default(0)->change();
         });
     }

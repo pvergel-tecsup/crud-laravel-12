@@ -40,15 +40,15 @@ Cree el archivo .env en base al archivo .env.example.
 ### Paso 3: Configurar la conexión a la base de datos
 En su archivo .env coloque la conexión a la base de datos creada en el paso 1.
 
-### Paso 4: Genere la clave de seguridad (APP_KEY) de su aplicación
+### Paso 4: Genere las dependencias y librerías externas de su aplicación (carpeta "vendor")
+En la carpeta del proyecto Laravel genere la carpeta "vendor" con las dependencias y librerías de la aplicación ejecutando el siguiente comando:
+> composer install
+
+### Paso 5: Genere la clave de seguridad (APP_KEY) de su aplicación
 En la carpeta del proyecto Laravel cree la llave (key) de seguridad de su aplicación ejecutando el siguiente comando:
 > php artisan key:generate
 
 Esto colocará la llave de seguridad en la variable APP_KEY en su archivo .env
-
-### Paso 5: Genere las dependencias y librerías externas de su aplicación (carpeta "vendor")
-En la carpeta del proyecto Laravel genere la carpeta "vendor" con las dependencias y librerías de la aplicación ejecutando el siguiente comando:
-> composer install
 
 ### Paso 6: Ejecute las migraciones
 En la carpeta del proyecto Laravel ejecute el siguiente comando:
